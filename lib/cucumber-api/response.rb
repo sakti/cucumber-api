@@ -5,9 +5,7 @@ require 'rest-client'
 module CucumberApi
 
   # Extension of {RestClient::Response} with support for JSON path traversal and validation
-  class Response
-
-    include RestClient::Response
+  class Response < RestClient::Response
 
     # Create a Response with JSON path support
     # @param response [RestClient::Response] original response
