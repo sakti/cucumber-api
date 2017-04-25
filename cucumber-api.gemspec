@@ -21,6 +21,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency('cucumber', '~> 2.0')
   s.add_dependency('jsonpath', '~> 0.5')
-  s.add_dependency('rest-client', '~> 1.8')
+  s.add_dependency('rest-client', '~> 2.0')
   s.add_dependency('json-schema', '~> 2.5')
 end
