@@ -11,9 +11,11 @@ module CucumberApi
     # @param response [RestClient::Response] original response
     # @return [Response] self
     def self.create response
-      result = response
-      result.extend Response
-      result
+      tmp = Response.new
+      response.instance_variables.each do |v|
+        tmp.instance_variable_set v, response.instance_variable_get(v)
+      end
+      tmp
     end
 
     # Check if given JSON path exists
